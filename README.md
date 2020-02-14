@@ -26,9 +26,22 @@ Explain in detail the workings of a dynamic array:
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
 
+** Runtime Complexity to access is O(1)
+** To Add/Remove from front, is O(n)
+** To Add/Remove from back is O(1), but if there is no room for Add, then O(n), 
+** as you need to copy and paste the array to a location with enough ** room
+
+** Worst case scenario if you extend/append is O(n)
+
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+** Blockchain is structured as a public ledger containing:
+** index number, timestamp, list of transactions, proof used to mine block, and hash of prev block
  
 Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+** proof of work makes an arbitrarily difficult problem that is solved by spending a large amount of computation time. Work cannot be re-used,
+** but it's easy to verify. 
+** Chain is protected because each block contains the prev's block hash value. So if any block is changed, it can be compared to the rest of the chain and if it does not match, the attacker's hash is rejected.
+
 
 ## Project Set Up
 
